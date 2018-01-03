@@ -34,6 +34,7 @@ class MembershipsTable extends Table
 
         $this->setTable('memberships');
         $this->setDisplayField('name');
+        $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
     }
@@ -48,8 +49,7 @@ class MembershipsTable extends Table
     {
         $validator
             ->integer('id')
-            ->requirePresence('id', 'create')
-            ->notEmpty('id');
+            ->allowEmpty('id', 'create');
 
         $validator
             ->scalar('name')
@@ -57,15 +57,6 @@ class MembershipsTable extends Table
             ->requirePresence('name', 'create')
             ->notEmpty('name');
 
-        $validator
-            ->scalar('description')
-            ->requirePresence('description', 'create')
-            ->notEmpty('description');
-
-        $validator
-            ->scalar('status')
-            ->requirePresence('status', 'create')
-            ->notEmpty('status');
 
         $validator
             ->numeric('price')
@@ -77,9 +68,6 @@ class MembershipsTable extends Table
             ->requirePresence('validity_type', 'create')
             ->notEmpty('validity_type');
 
-        $validator
-            ->requirePresence('deleted', 'create')
-            ->notEmpty('deleted');
 
         return $validator;
     }

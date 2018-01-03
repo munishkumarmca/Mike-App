@@ -215,3 +215,6 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 \Cake\Core\Plugin::load('BootstrapUI');
+
+
+Configure::write('App.title', "Hobby App");

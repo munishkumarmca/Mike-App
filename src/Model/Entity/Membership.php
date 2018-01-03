@@ -29,7 +29,6 @@ class Membership extends Entity
      * @var array
      */
     protected $_accessible = [
-        'id' => true,
         'name' => true,
         'description' => true,
         'status' => true,

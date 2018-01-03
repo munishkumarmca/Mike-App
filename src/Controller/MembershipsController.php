@@ -2,6 +2,18 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Controller\Component;
+use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
+use Cake\I18n\Time;
+use Cake\Network\Exception\UnauthorizedException;
+use Cake\Mailer\Email;
+use Cake\Routing\Router;
+
+
+use Cake\Datasource\Exception\InvalidPrimaryKeyException;
+use Cake\Core\Configure;
+use Cake\Core\Configure\Engine\PhpConfig;
 
 /**
  * Memberships Controller
@@ -18,12 +30,42 @@ class MembershipsController extends AppController
      *
      * @return \Cake\Http\Response|void
      */
-    public function index()
-    {
-        $memberships = $this->paginate($this->Memberships);
-
-        $this->set(compact('memberships'));
+ public function initialize(){
+        parent::initialize();
+	}
+	
+	public function beforeFilter(Event $event){
+        parent::beforeFilter($event);
+		 $this->loadComponent('Common');
+		//$this->Auth->allow(['*', 'register', 'logout', 'forgotPassword']);
     }
+    public function index(){
+	
+		$settings = $this->Common->getAllSettings();	
+		$globalSetting = array();
+        if (!empty($settings)) {
+            foreach ($settings as $setting) {
+                $globalSetting[$setting['setting_key']] = $setting['value'];
+            }
+        }		
+		$this->set('globalSetting', $globalSetting);
+
+         $this->paginate = [
+            'limit' => $globalSetting['pagination_limit'] ? $globalSetting['pagination_limit'] : 25,
+            'order' => ['Memberships.created' => 'asc'],
+            'conditions' => ['Memberships.deleted' => 0 ]
+        ];
+        $memberships = $this->paginate($this->Memberships);
+        
+        $this->set(compact('memberships'));
+		
+		$this->Breadcrumb->add([
+			['title' => 'Dashboard', 'url' => ['controller' => 'dashboard', 'action' => 'index']],
+			['title' => 'All Membership Packages', 'url' => []]
+		]);
+		$this->set('breadcrumb', $this->Breadcrumb->render());
+    }
+
 
     /**
      * View method
@@ -48,6 +90,8 @@ class MembershipsController extends AppController
      */
     public function add()
     {
+		$this->set('scripts', ["plugins/select2/dist/js/select2.min", 'admins/update_profile', 'plugins/dropjone', "plugins/datepicker/js/bootstrap-datepicker.min", "plugins/tinymce/js/tinymce/tinymce.min"]);
+        $this->set('styles', ["plugins/select2/dist/css/select2.min", "plugins/dropjone"]);
         $membership = $this->Memberships->newEntity();
         if ($this->request->is('post')) {
             $membership = $this->Memberships->patchEntity($membership, $this->request->getData());
@@ -70,6 +114,8 @@ class MembershipsController extends AppController
      */
     public function edit($id = null)
     {
+		$this->set('scripts', ["plugins/select2/dist/js/select2.min", 'admins/update_profile', 'plugins/dropjone', "plugins/datepicker/js/bootstrap-datepicker.min", "plugins/tinymce/js/tinymce/tinymce.min"]);
+        $this->set('styles', ["plugins/select2/dist/css/select2.min", "plugins/dropjone"]);
         $membership = $this->Memberships->get($id, [
             'contain' => []
         ]);

@@ -43,9 +43,10 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-		
-		
-		
+		$this->loadComponent('Paginator');
+		$this->viewBuilder()->layout('loggedin');
+		//$userId = $this->request->session()->read('Auth.User.id');
+			
 		$this->loadComponent('RequestHandler');
         $this->loadComponent('Common');
         $this->loadComponent('Breadcrumb');
@@ -76,11 +77,5 @@ class AppController extends Controller
 				],
 			]
         ]);
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
     }
 }

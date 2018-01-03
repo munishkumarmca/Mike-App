@@ -1,0 +1,572 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
+body{
+    font-family: 'Roboto Slab', serif !important;
+}
+
+body.error{
+    background: url('../img/error-bg.jpg');
+    background-size: cover;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: url('../img/bg.jpg');
+
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+.table-smallsize{
+	font-size: 12px;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+    padding: 30px 15px 100px 0;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+nav.navbar-full{
+    background: #6EB1C3
+}
+nav.navbar-full a{
+    color: #fff;
+}
+footer.footer {
+    background: #000;
+    text-align: center;
+    clear: both;
+    margin: 30px 0 0 0;
+}
+footer.footer p.text-muted{
+    color: #fff;
+}
+.mainSidebar{
+    background: #000;
+}
+.sendSupport{
+    margin: 15px;
+}
+label.errorLabel {
+    color: #d39b9a;
+    font-size: 12px;
+    font-weight: normal;
+}
+img.profile-image{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+ul.loggedin-nav {
+    list-style-type: none;
+    display: block;
+}
+
+.header-right {
+    float: right;
+    padding: 7px 25px 0 1px;
+}
+.loggedin-nav li {
+    display: block;
+    float: left;
+    margin: 0 1px;
+    padding: 12px 7px;
+}
+.loggedin-nav li.profile-image {
+    padding: 0px;
+}
+/*
+*multiple checkboxes
+*/
+.form-group.fullWidth{
+    width: 98%;
+    margin: 10px auto;
+    float: none;
+    clear: both;
+    display: block;
+}
+.form-group.input.multicheckbox {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.form-group.input.multicheckbox .checkbox {
+    float: left;
+    padding: 0 10px;
+}
+.radio .radio {
+    line-height: 19px;
+    padding: 10px 3px;
+}
+.radio > .radioLabel {
+    padding: 12px 0 0;
+}
+.error .help-block,.form-group label.errorLabel {
+    color:  #a94442;
+    position: absolute;
+}
+.error .form-control{
+    border: 1px solid #a94442;
+}
+.two-column-form div.input {
+    float: left;
+    margin: 0 1%;
+    width: 48%;
+}
+p.interInfoText{
+    font-size: 16px;
+    padding: 0 0 20px;
+}
+/*Loader*/
+/* Absolute Center Spinner */
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+textarea{
+    resize: none;
+}
+.loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 1500ms infinite linear;
+    -moz-animation: spinner 1500ms infinite linear;
+    -ms-animation: spinner 1500ms infinite linear;
+    -o-animation: spinner 1500ms infinite linear;
+    animation: spinner 1500ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.5) -1.5em 0 0 0, rgba(0, 0, 0, 0.5) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+    box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
+}
+.nav-side-menu ul .sub-menu li.active{
+    background: #f5f5f5;
+}
+i.fa{
+    padding: 0 4px 0 5px;
+}
+.projectPanel .panel-footer{
+    background: #337AB7;
+}
+.projectPanel .panel-body{
+    background: #D9EDF7;
+    min-height: 90px;
+}
+.projectPanel .thumbW{
+    background: #f5f5f5; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    clear: both;
+    height: 190px;
+    margin: auto;
+    padding: 4px;
+    width: 190px;
+    float: none;
+}
+.projectPanel .thumbO{
+    clear: both;
+    display: block;
+    text-align:center;
+    margin: auto;
+    width: 100%;
+}
+.projectPanel .panel-body{
+    text-align: center;
+}
+.projectPanel .thumbW img{
+    width: 100%;
+    height: 100%;
+}
+.panelLink {
+    color: #fff;
+    display: inline-block;
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+}
+.panelLink li {
+    color: #fff;
+    display: inline;
+    float: none;
+    margin: auto;
+    text-align: center;
+    line-height: 32px;
+}
+.panelLink li a {
+    background: #f5f5f5;
+    border-radius: 3px;
+    color: #337ab7;
+    margin: 0 5px;
+    padding: 4px 12px;
+    text-align: center;
+}
+.select .select2-container{
+    width: 100%!important;
+}
+.thumbWBig {
+    border: 8px solid #f5f5f5;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+.thumbWBig img{
+    width: 100%;
+    height: 100%;
+}
+img{
+    max-width: 100%;
+}
+.vertical-table-project{
+    padding-top: 15px;
+}
+/* Animation */
+/**/
+.form-inline .form-group{
+    width: auto;
+}
+.searchProjectBlock {
+    background: #f5f5f5;
+    clear: both;
+    display: block;
+    margin: 20px 0;
+    min-height: 68px;
+    padding: 10px 0;   
+    float: left;
+    width: 100%;
+}
+.paginator {
+    border-top: 1px solid #f5f5f5;
+    clear: both;
+    padding: 0 16px;
+    text-align: center;
+}
+.form .btn.btn-default[type="submit"] {
+    background: #f5f5f5 none repeat scroll 0 0;
+    clear: both;
+    margin: 7px 10px;
+}
+.radioWrapper label{
+    float: left;
+    width: auto;
+    margin: 0 10px;
+    line-height: 19px;
+}
+.radioWrapper {
+    margin: 12px 0;
+}
+.fullWidth #dropzonePreview {
+    min-height: 165px;
+}
+.fullWidth .dropzone .dz-preview .dz-image{
+    border-radius: 1px;
+}
+.fullWidth .dropzone .dz-preview.dz-image-preview{
+    background: #f5f5f5;
+}
+.fullWidth .dropzone .dz-preview .dz-progress{
+    border-radius: 3px;
+    height: 10px;
+}
+.heading.List {
+    display: inline-block;
+    list-style: outside none none;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.heading.List li {
+    display: block;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin: 10px 11px;
+    padding: 0 11px 0 0;
+    float: left;
+}
+.heading.List li span{
+    line-height: 30px;
+    padding: 6px;
+    margin: 0 5px 0 0;
+}
+.heading.List li span.label1{
+    background: #f5f5f5;
+}
+.teamMembers p {
+    text-align: right;
+}
+.taskA li img {
+    width: 120px;
+}
+.taskA {
+    background-color: rgba(249, 249, 249, 0.1); 
+    color: rgba(249, 249, 249, 0.1);
+    float: left;
+    list-style: outside none none;
+    width: 100%;
+}
+
+.taskA li {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border-radius: 5px;
+    float: left;
+    height: auto;
+    margin: 15px 7px;
+    padding: 12px 0;
+    text-align: center;
+    width: 128px;
+    position: relative;
+}
+.taskA a.remove{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    color: #f00;
+}
+.replyBlock {    
+    clear: both;
+    margin: 20px;
+    padding: 2px;
+    border-top: 1px solid #ccc;
+    background: rgba(205, 205, 205); /* Fallback */
+    background-color: rgba(205, 205, 205, 0.1);
+}
+.replyBlock:nth-child(odd) {
+    background: rgba(65, 65, 65); /* Fallback */
+    background-color: rgba(65, 65, 65, 0.1);
+}
+.replyBlock .replyContents{
+    padding: 3px 20px;
+}
+.heading.List li span {
+    font-size: 11px;
+    line-height: 23px;
+    margin: 0 5px 0 0;
+    padding: 4px 0 5px 2px;
+}
+.replies{
+    border-top: 1px solid #ccc;
+    background: rgba(235, 235, 235); /* Fallback */
+    background-color: rgba(235, 235, 235, 0.1);
+   
+    clear: both;
+    padding: 0 0 0 3%;
+}
+.trackerResponse p {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding: 0 11px;
+    background: #f5f5f5;
+    padding: 10px;
+}
+/**/
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+ .form-group.quat{
+        width: 23%;
+    }
+    .has-error .select2-container--default .select2-selection--single{
+        border: 1px solid #a94442;
+    }
+    .error .help-block, .form-group select.chosen-select + label.errorLabel {
+        color: #a94442;
+        left: 0;
+        position: absolute;
+        top: 60px;
+    }
+    .error .help-block, .form-group label.errorLabel{
+        color: #a94442;
+        left: 0;
+        position: absolute;
+        top: 60px;
+    }
+/*Loader Ends*/
+.btn-group-top legend{border:none;}
+.btn-group-top{border-bottom: 1px solid #e5e5e5;}
+.btns-group{float:right;}
+.btns-group a{float: left;margin-right: 10px;}
+.btns-group a:last-child{margin-right: 0px;}
+.form .btn.btn-success[type="submit"] {clear: both;margin: 7px 10px;}
+
+.projectsMain {
+    border-top: 2px solid #f5f5f5;
+    padding: 2px;
+    width: 100%;
+	clear: both;
+}
+.projectsMain .blockHeader{
+	float: left;
+	width: 68px;
+	border: 1px solid #f5f5f5;
+	text-align: center;
+	background: #f5f5f5;
+}
+.blockHeader p{
+	font-size: 32px;
+}
+.projectsMain > ul{
+	list-style-type: none;
+	padding: 8px 0 0 90px;
+}
+.projectsMain > ul .panelLink{
+	width: auto;
+	text-align: center;
+}
+.projectTaskW {
+    clear: both;
+    float: left;
+    border-bottom: 1px solid #f5f5f5;
+    width: 100%;
+    padding: 10px 0 0px 0;
+}
+.projectTask {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.projectActions {
+    float: left;
+}
+.projectTask p span {
+    margin: 0 0 0 10px;
+}
+.page-header .titleBlock {
+    float: left;
+    width: 60%;
+}
+.page-header  .formBlock {
+    float: right;
+    width: 38%;
+    margin-top: 17px;
+}
+.page-header  .formBlock select {
+    width: 275px;
+}
+span.input-icon label.control-label{
+	display: none;
+}

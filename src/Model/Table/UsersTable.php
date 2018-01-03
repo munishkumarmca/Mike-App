@@ -117,28 +117,7 @@ class UsersTable extends Table
             ->scalar('display_name')
             ->maxLength('display_name', 250)
             ->allowEmpty('display_name');
-
-        $validator
-            ->scalar('image')
-            ->maxLength('image', 250)
-            ->allowEmpty('image');
-
-        $validator
-            ->dateTime('last_logged_in')
-            ->allowEmpty('last_logged_in');
-
-        $validator
-            ->dateTime('end_date')
-            ->allowEmpty('end_date');
-
-        $validator
-            ->dateTime('dob')
-            ->allowEmpty('dob');
-
-        $validator
-            ->requirePresence('deleted', 'create')
-            ->notEmpty('deleted');
-
+     
         return $validator;
     }
 
@@ -157,4 +136,114 @@ class UsersTable extends Table
 
         return $rules;
     }
+	
+	  /**
+     * Default validation rules.
+     *
+     * @param \Cake\Validation\Validator $validator Validator instance.
+     * @return \Cake\Validation\Validator
+     */
+    public function validationDefault_a(Validator $validator){
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->requirePresence('login', 'create')
+            ->notEmpty('login');
+			
+		$validator->requirePresence('email')
+		->add('email', 'validFormat', [
+        'rule' => 'email',
+        'message' => 'E-mail must be valid'
+		]);
+
+        $validator
+            ->requirePresence('password', 'create')
+            ->notEmpty('password');
+
+       	return $validator;
+    }
+	public function validationPassword(Validator $validator ) {
+		$validator 
+			->add('old_password','custom',[ 
+				'rule'=> function($value, $context){
+					$user = $this->get($context['data']['id']); 
+					
+					if ($user) { 
+						if ((new DefaultPasswordHasher)->check($value, $user->admin_password)) { 
+							return true; 
+						} 
+					}
+					return false; 
+				}, 
+				'message'=>'The old password is incorrect.', 
+			]) 
+			->notEmpty('old_password'); 
+			
+		$validator 
+			->add('new_password', [ 
+				'length' => [ 
+					'rule' => ['minLength', 6], 
+					'message' => 'The new password must have at least 6 characters.', 
+				]
+			]) 
+			->add('new_password',[ 
+				'match'=>[ 
+					'rule'=> ['compareWith','confirm_password'], 
+					'message'=>'The new password and confirm password must be same.', 
+				]
+			])
+			->notEmpty('new_password'); 
+			
+		$validator 
+			->add('confirm_password', [ 
+				'length' => [ 
+					'rule' => ['minLength', 6], 
+					'message' => 'The confirm password must have at least 6 characters.', 
+				]
+			]) 
+			->add('confirm_password',[ 
+				'match'=>[ 
+					'rule'=> ['compareWith','new_password'], 
+					'message'=>'The new password and confirm password must be same.', 
+				]
+			])
+			->notEmpty('confirm_password'); 
+			return $validator; 
+	}
+	
+	public function validationResetPassword(Validator $validator ) {
+		
+		$validator 
+			->add('new_password', [ 
+				'length' => [ 
+					'rule' => ['minLength', 6], 
+					'message' => 'The new password must have at least 6 characters.', 
+				]
+			]) 
+			->add('new_password',[ 
+				'match'=>[ 
+					'rule'=> ['compareWith','confirm_password'], 
+					'message'=>'The new password and confirm password must be same.', 
+				]
+			])
+			->notEmpty('new_password'); 
+			
+		$validator 
+			->add('confirm_password', [ 
+				'length' => [ 
+					'rule' => ['minLength', 6], 
+					'message' => 'The confirm password must have at least 6 characters.', 
+				]
+			]) 
+			->add('confirm_password',[ 
+				'match'=>[ 
+					'rule'=> ['compareWith','new_password'], 
+					'message'=>'The new password and confirm password must be same.', 
+				]
+			])
+			->notEmpty('confirm_password'); 
+		return $validator; 
+	}
 }

@@ -1,0 +1,13 @@
+.panel.panel-info, .singin, .panel.panel-danger{
+	max-width: 640px;
+	margin: auto
+}
+.panel-body{
+	min-height: 170px;
+}
+h3.panel-title{
+    color: #000;
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}

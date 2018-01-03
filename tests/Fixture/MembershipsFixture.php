@@ -26,6 +26,9 @@ class MembershipsFixture extends TestFixture
         'deleted' => ['type' => 'tinyinteger', 'length' => 4, 'unsigned' => false, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        '_constraints' => [
+            'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+        ],
         '_options' => [
             'engine' => 'InnoDB',
             'collation' => 'latin1_swedish_ci'
@@ -47,8 +50,8 @@ class MembershipsFixture extends TestFixture
             'price' => 1,
             'validity_type' => 'Lorem ipsum dolor sit amet',
             'deleted' => 1,
-            'created' => '2018-01-01 04:23:28',
-            'modified' => '2018-01-01 04:23:28'
+            'created' => '2018-01-01 20:10:50',
+            'modified' => '2018-01-01 20:10:50'
         ],
     ];
 }

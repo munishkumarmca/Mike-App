@@ -1,0 +1,346 @@
+#previews{
+	width: auto;
+	background: none;
+	float: left;
+	display: block;
+	width: 100%;
+}
+.file-row.dz-image-preview {
+    float: left;
+    width: 31%;
+    margin: 10px;
+    border: 2px dashed #ccc;
+    background: #f6f6f6;
+	position: relative;
+	padding-bottom: 15px;
+}
+.uploadBtn {
+    float: left;
+    width: 100%;
+    clear: both;
+    height: 34px;
+}
+
+span.input-icon label.control-label{
+	display: block;
+}
+.fullWidth #dropzonePreview {
+    min-height: 165px;
+    margin-top: 38px;
+}
+#dropzonePreview.dropzonePreview{
+	background: none;
+	border: none;
+	min-height: 10px;
+}
+.btn.btn-danger.delete.deletePreview {
+    float: right;
+    margin: 0px 0 0 10px;
+}
+.attachmentLabel {
+    float: left;
+    margin: 14px 0;
+    min-width: 74px !important;
+    width: 190px;
+    position: absolute;   
+    left: 7px;
+    bottom: 12px;
+}
+.attachmentLabel {
+    float: left;
+    margin: 14px 0;
+    min-width: 74px !important;
+    width: 190px;
+
+}
+.preview {
+    text-align: center;
+    display: block;
+    max-height: 100px;
+    border: 1px solid #ccc;
+    height: 100px;
+    width: 120px;
+    overflow: hidden;
+    padding: 10px;
+    float: left;
+	background: #f6f6f6;
+}
+.image span.preview img {
+    max-width: 100%;
+    padding: 0;
+    height: 79px;
+    overflow: hidden;
+    /* float: left; */
+    /* border: 1px solid #ccc; */
+    /* width: 100px; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info .sbI {
+    float: right;
+    height: 100px;
+    display: block;
+    clear: both;
+    width: 100%;
+}
+div.progress {
+    height: 10px;
+    margin-bottom: 10px;
+    position: absolute;
+   /*  width: 90%; */
+    left: 5%;
+    bottom: 0;
+}
+#previews .info {    
+    text-align: right;
+}
+.dzPre {
+    float: left;
+    width: 100%;
+}
+.prebuiltBlock{
+	float: left;
+	width: 31%;
+	margin: 10px;
+	border: 2px dashed #ccc;
+	background: #f6f6f6;
+	position: relative;
+	padding: 15px;
+}
+.prebuiltBlock .image{
+	float: left;
+	width: 30%
+}
+.prebuiltBlock .info{
+	float: right;
+	width: 70%
+}
+.deletePreviewExisting {
+    float: right;
+}
+#attachmentLabel{
+	float: left;
+	margin: 0px;
+}
+.info p.name {
+    float: right;
+    max-width: 100%;
+    word-wrap: normal;
+    word-break: break-all;
+    width: 76%;
+}
+
+/*blank ctp*/
+#masthead {
+	background-color: #000044;
+    background-image: url("../img/post-bg.jpg");
+    background-size: cover;
+    color: #003366;
+    min-height: 270px;
+	position: relative;
+	margin: 0px;
+}
+.featuredTopInner {
+    background: rgba(0, 0, 0, 0.3) none repeat scroll 0 0;
+    color: #fff;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.catList {
+    float: right;
+    list-style: outside none none;
+    text-align: right;
+}
+.mainCats {
+    background: #006699;
+    margin: 0;
+    min-height: 42px;
+    padding: 9px 0 0;
+}
+.blank .mainCats a{
+	color: #f6f6f6;
+}	
+#masthead h1 {
+	font-size: 45px;
+	line-height: 1;
+}
+#leftCol{
+	pos
+}
+#leftCol .sideBar{
+    background: #ccc none repeat scroll 0 0;
+    float: left;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+#masthead .well {
+	margin-top:13%;
+	background-color:#111155;
+  	border-color:#000033;
+}
+.stickyNav {
+    background: #fff none repeat scroll 0 0;
+	margin-top: 20px;
+}
+.nav-stacked > li {
+	border-bottom: 1px dashed #ccc;
+}
+.icon-bar {
+	background-color:#fff;
+}
+.blank a{
+	color: #006699;
+}
+.mainAttachments{
+	background: #fff;
+	border-bottom: 2px solid #ccc;
+}
+.mainattachemnts .image, .mainattachemntsInner .image{
+    background-attachment: scroll;
+    background-color: #f6f6f6;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    float: left;
+    margin: 10px;
+    padding: 10px 10px 5px;
+    text-align: center;
+    width: 18%;
+}
+.readMoreSection, .readLessSection {
+    float: right;
+}
+.readLessSection{
+	display: none;
+}
+@media screen and (min-width: 768px) {
+	#masthead h1 {
+		font-size: 50px;
+	}
+}
+
+.navbar-bright {
+	background-color:#111155;
+    color:#fff;
+}
+  
+.navbar-bright a, #masthead a, #masthead .lead {
+  	color:#aaaacc;
+}
+
+.navbar-bright li > a:hover {
+    background-color:#000033;
+}
+
+.affix-top,.affix{
+	position: static;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+  	margin-top:30px;
+  	width:228px;
+  }
+  
+  #sidebar.affix-bottom {
+    position: relative;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:70px;
+    width:228px;
+  }
+}
+
+#sidebar li.active {
+  	border:0 #eee solid;
+  	border-right-width:4px;
+}
+
+#sidebar li li.active {
+  	border:0 #ccc solid;
+  	border-right-width:3px;
+}
+
+#mainCol h2 {
+	padding-top: 55px;
+    margin-top: -55px;
+}
+footer.bfoot{
+
+    background: #000 none repeat scroll 0 0;
+    min-height: 55px;
+    padding-bottom: 4px;
+    padding-top: 15px;
+
+}
+
+
+#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+.postContents {
+    display: block;
+    padding-top: 30px;
+}
+.postWrapper {
+    margin: 20px 0;
+    padding: 20px;
+}
+.postWrapper.odd{
+	background: #f6f6f6;
+}
+.file-row{
+    float: left;
+    width: 31%;
+    margin: 10px;
+    border: 2px dashed #ccc;
+    background: #f6f6f6;
+    position: relative;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,217 @@
+#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+		background: #ccc none repeat scroll 0 0;
+		border: 2px solid #ccc;
+		border-radius: 3px;
+		color: #d9230f;
+		left: 0;
+		margin-bottom: 0;
+		margin-top: 11px;
+		padding: 6px 8px 5px 10px;
+		position: relative;
+
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
+.postContents {
+    display: block;
+    padding-top: 30px;
+}
+.postWrapper {
+    margin: 20px 0;
+    padding: 20px;
+}
+.postWrapper.odd{
+	background: #f6f6f6;
+}
+.catInfo {
+    
+    float: left;
+    margin: 0 -2%;
+    padding: 20px;
+    width: 106%;
+}
+.catThumb.col-md-4 {
+    float: left;
+    width: 30%;
+}
+.catInfo.col-md-8 {
+    float: left;
+    width: 70%;
+}
+.catInfo.col-md-12 {
+    float: left;
+    width: 100%;
+}
+.featureBlock{
+	background: #EFEFF4;
+	background-size: cover;
+}
+.alert.alert-info {
+    font-size: 28px;
+    padding: 21px;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+.catInfoI > hr {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f6f6f6;
+    color: #fff;
+}
+.frontView .image {
+    background: #f6f6f6 none repeat scroll 0 0;
+    border: 1px solid #f6f6f6;
+    border-radius: 4px;
+    float: left;
+    height: 200px;
+    margin: 10px;
+    padding: 6px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+.imageLabel {
+    background: rgba(0, 0, 0, 0.35) none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+a.fancyButton{
+	color: #fff;
+}
+.fancyButton:hover .image,
+.fancyButton:focus .image {
+  transform: scale(1.01);
+}
+.imageLabel .labelText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.frontView .image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #f6f6f6;
+    border-radius: 4px;
+    float: left;
+    height: 120px;
+    margin: 10px;
+    padding: 6px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+.catInfoI {
+    float: left;
+    width: 97%;
+}
+.catInfoIShort {
+    float: left;
+    width: 70%;
+	margin-left: 2%;
+}
+.catThumb {
+    float: left;
+    width: 27%;
+}
+.catInfo hr {
+   background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin: 2px 0 9px;
+    max-width: 95%;
+    padding: 0;
+}
+.fCatList > .sep {
+    padding: 0 1px 0 4px;
+}
+.sep:last-child {
+    display: none;
+}
+.postContents {
+    float: left;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+.stickyNav {
+    background: #007aff;
+    float: left;
+    margin: 0px;
+    width: 100%;
+}
+.sideBar {
+    float: left;
+    width: 28%;
+}
+.mainContent {
+    float: right;
+    width: 68%;
+}
+.stickyNav li {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	width: 100%;
+}
+.stickyNav a {
+    color: #fff;
+	border-bottom: 1px solid #f6f6f6;    
+	width: 100%;
+	float: left;
+	display: block;
+	padding: 6px 15px;
+}
+.stickyNav > ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	list-style: none;
+}
+.stickyNav a.active,.stickyNav a:hover  {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid blue;
+    color: blue;
+}
+.readLessSection{
+	display: none;
+}
+.readMoreSection, .readLessSection {
+    margin-right: 3%;
+}
+.mainSec {
+    float: left;
+    width: 97%;
+}
